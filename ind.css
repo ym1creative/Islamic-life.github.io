@@ -1,0 +1,191 @@
+*{
+    margin: 0%;
+    scroll-behavior: smooth;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "Nunito";
+}
+body{
+   background-color: #00150f;
+}
+
+.nav{
+    border-radius: 20px 20px 0px 0px ;
+    font-weight: bold;
+    font-size: 25px;
+    background-color: #9da49d;
+    display: flex;
+    justify-content:flex-start;
+}
+.nav ul{
+    list-style-type: none;
+}
+.nav li a{
+   text-decoration: none;
+    color: white;
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: auto;
+    width: 600px;
+}
+.parent{
+    max-width: 100%; 
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image:url(jonathan-takle-6-LA_PIySJ4-unsplash.jpg);
+    background-size: cover;
+    background-position: center;}
+    .parent1{
+        max-width: 100%;
+        position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image:url(pexels-victor-lavaud-3361480.jpg);
+    background-size: cover;
+    background-position: center;}
+    
+.bac{
+    background: linear-gradient(360deg, #484d4891, transparent);
+    border:1px solid rgb(255 210 95 / 59%);
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+     
+}
+.back1{
+    border: 2px solid rgba(255,255,255,0.2);
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.CAR{
+    flex-wrap: wrap;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+}
+.IS a{
+    width: 100%;
+    max-width: 100%;
+    text-decoration: none;
+    text-shadow:0px 2px 3px #ffffff94;
+    font-weight: bold;
+    border-radius: 20px;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 50%;
+    color: white;
+    font-size: 50px;
+    left: 50%;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.iss{
+    width: 100%;
+    max-width: 100%;
+    text-decoration: none;
+    text-shadow:0px 5px 10px #5a300094;
+    font-weight: bold;
+    border-radius: 20px;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 60%;
+    color: white;
+    font-size: 15px;
+    left: 50%;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.card { 
+    height: 60px;
+   
+    display: flex;
+    background-color: #00464357;
+ 
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.4s;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.card1{ 
+    height: 60px;
+   
+    display: flex;
+    background-color: #00513e36;
+    
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.4s;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.icon img{
+    width: 80px;
+} 
+ 
+.card:hover { 
+    margin-left: 40px; 
+    background-color: #004642;
+} 
+.card1:hover { 
+    margin-left: 40px; 
+    background-color: #00513ec4;
+} 
+.IS a:hover{
+    top: 49%;
+}
+@media(min-width:240px){
+    .container{width: 252px;}.info p a{font-size: 23px !important}.IS a {font-size: 40px !important}
+}
+@media(min-width:375px){
+    .container{width: 357px;} .info p a{font-size: 25px !important}
+}
+@media(min-width:768px){
+    .container{width: 750px;}
+}
+@media(min-width:992px){
+    .container{width: 970px;}
+}
+@media(min-width:1200px){
+    .container{width: 1170px;}.info p a{font-size: 40px !important}
+}
+.info p{
+    font-weight: 600;
+
+    color: white;
+    position: relative;
+}
+.info p a{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 40px;
+    color: white;
+    position: relative;
+}
