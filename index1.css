@@ -289,7 +289,7 @@ iframe {
 .buttt{
     
     position: absolute;
-    bottom: 1%;
+    bottom: 0%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
