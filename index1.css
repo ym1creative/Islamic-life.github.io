@@ -42,7 +42,7 @@
     font-size: 25px;
     background-color:#4d748b5e;
     display: flex;
-    justify-content:flex-start;
+    justify-content:space-between;
 }
 .nav ul{
     list-style-type: none;
@@ -95,7 +95,13 @@
     margin: auto;
     width: 600px;
 }
-
+.bx{
+cursor: pointer;
+margin: 10px;
+}
+.bx:hover{
+    color: white;
+}
 .parent2{
     background-image: url(daniel-lincoln-wF9PZkQLpZs-unsplash.jpg);
     max-width: 100%; 
@@ -133,6 +139,7 @@ body video{
 }
 
 .parent{
+    filter: invert(0);
     background: url(grunge-wall-texture.jpg)  ;
     -webkit-background-size: contain;
     -moz-background-size: contain;
@@ -152,7 +159,7 @@ body video{
     right: 0%;
     top: 32vh;
     position: absolute;
-    font-size: 40px !important;
+    font-size: 40px ;
     color: rgb(0, 0, 0);
     display: flex;
     width: 100%;
@@ -245,7 +252,9 @@ body video{
 .container{
     height: 100%;
 }
-   
+   .video1{
+    
+   }
 .playlist-container {
     
     font-size: 20px;
@@ -289,7 +298,7 @@ iframe {
 .buttt{
     
     position: absolute;
-    bottom: 0%;
+    bottom: 1%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -317,9 +326,28 @@ iframe {
     text-decoration: none;
 }
 
-
-  
+.playlsit{
     
+    backdrop-filter: blur(20px);
+    width: 30vh;
+    z-index: 2;
+    position: absolute;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50VH;
+    flex-direction: column;
+    justify-content: space-around;
+}
+  
+     
+@media(min-width:200px){
+    .container{width: 200px;}.bism img{width: 35vh;}.span1{top: 15vh; font-size: 15px ;}.p2{width: 90%;font-size: 30px ;}.p1{font-size: 60px ;}
+    .page1 p{font-size: 30px;}.parent{height: 6300px ;}.pga a{font-size: 30px;}
+}  
 @media(min-width:240px){
     .container{width: 300px;}.bism img{width: 55vh;}.span1{top: 15vh; font-size: 25px !important;}.p2{width: 80%;}
     .parent{height: 10300px;}
@@ -328,12 +356,13 @@ iframe {
     .container{width: 357px;}.parent{height: 8400px;}
 }
 @media(min-width:768px){
-    .container{width: 750px;}.span1{font-size: 40px !important;padding-top: 30px;}.bism img{width: 100vh;}.p2{width: 30%;}
-    .parent{height: 9500px;}
+    .container{width: 750px;}.span1{font-size: 40px !important;padding-top: 30px;}.bism img{width: 100vh;}.p2{width: 30%;}.page1 p{font-size: 50px;}.p1{font-size: 80px;}
+    .pga a{font-size: 40px;} .parent{height: 9500px;}
 }
 @media(min-width:992px){
     .container{width: 970px;}.parent{height: 7200px;}
 }
 @media(min-width:1200px){
-    .container{width: 1170px;}.parent{height: 6000px;}
+    
+    .container{width: 1170px;}.parent{height: 6000px;}.p1{font-size: 60px ;}.p1{font-size: 80px;}
 }
