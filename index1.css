@@ -45,7 +45,7 @@
     justify-content:center;
 }
 .nav ul{
-    
+    max-width: 100%;
     margin-right: 0vh;
     display: flex;
     list-style-type: none;
@@ -77,10 +77,10 @@
     transition: 0.4s;
 }
 @media screen and (max-width: 300px){
-    .p1{font-size: 4rem;}.bism img{width: 15rem;}
+    .p1{font-size: 4rem;}.bism img{width: 15rem;}.page1 p{font-size: 2.2rem;}
 }
 @media screen and (min-width: 300px){
-    .p1{font-size: 5rem;}.bism img{width: 20rem;}
+    .p1{font-size: 5rem;}.bism img{width: 20rem;}.page1 p{font-size: 3rem;}
 }
 .p2{
     background-color: #11535359;
@@ -377,5 +377,12 @@ iframe {
     font-family: auto;
   }
   .bism img{
-    width: 20rem;
+    
   }
+  .bute{
+    cursor: pointer;
+    border-radius: 20px;
+    color: white;
+    background-color: #2f2f2f;
+}
+  
