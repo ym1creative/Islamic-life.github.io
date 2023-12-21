@@ -42,10 +42,18 @@
     font-size: 25px;
     background-color:#4d748b5e;
     display: flex;
-    justify-content:space-between;
+    justify-content:center;
 }
 .nav ul{
+    
+    margin-right: 0vh;
+    display: flex;
     list-style-type: none;
+    flex-direction: row-reverse;
+    list-style-type: none;
+}
+.nav li{
+    margin-right: 10vh;
 }
 .nav li a{
    text-decoration: none;
@@ -93,7 +101,7 @@
     padding-right: 15px;
     padding-left: 15px;
     margin: auto;
-    width: 600px;
+    
 }
 .bx{
 cursor: pointer;
@@ -148,7 +156,7 @@ body video{
     max-width: 100%; 
     position: relative;
     width: 100%;
-    height: 300vh;
+    
     background-position: center;
     background-repeat: repeat;
 }
@@ -238,7 +246,7 @@ body video{
     max-width: 100%; 
     position: relative;
     width: 100%;
-    height: 100vh;
+    
     background-size: cover;
     background-position: center;
 }
@@ -342,27 +350,25 @@ iframe {
     flex-direction: column;
     justify-content: space-around;
 }
-  
-     
-@media(min-width:200px){
-    .container{width: 200px;}.bism img{width: 35vh;}.span1{top: 15vh; font-size: 15px ;}.p2{width: 90%;font-size: 30px ;}.p1{font-size: 60px ;}
-    .page1 p{font-size: 30px;}.parent{height: 6300px ;}.pga a{font-size: 30px;}
-}  
-@media(min-width:240px){
-    .container{width: 300px;}.bism img{width: 55vh;}.span1{top: 15vh; font-size: 25px !important;}.p2{width: 80%;}
-    .parent{height: 10300px;}
+  .buttons{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .buu{
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: none;
+    background:#000000d6;
 }
-@media(min-width:375px){
-    .container{width: 357px;}.parent{height: 8400px;}
-}
-@media(min-width:768px){
-    .container{width: 750px;}.span1{font-size: 40px !important;padding-top: 30px;}.bism img{width: 100vh;}.p2{width: 30%;}.page1 p{font-size: 50px;}.p1{font-size: 80px;}
-    .pga a{font-size: 40px;} .parent{height: 9500px;}
-}
-@media(min-width:992px){
-    .container{width: 970px;}.parent{height: 7200px;}
-}
-@media(min-width:1200px){
-    
-    .container{width: 1170px;}.parent{height: 6000px;}.p1{font-size: 60px ;}.p1{font-size: 80px;}
-}
+  .page p{
+    line-height: 8vh;
+    padding: 5vh;
+    font-size: 2rem;
+    font-family: auto;
+  }
+  .bism img{
+    width: 20rem;
+  }

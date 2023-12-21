@@ -51,7 +51,7 @@ var video = document.getElementById("myVideo");
 var source = document.getElementById("videoSource");
 
 // Define the new video source
-var newSource = "production_id_4787839 (1080p).mp4";
+var newSource = "cave_-_45340 (Original).mp4";
 
 // Update the source element's src attribute
 source.src = newSource;
@@ -66,7 +66,7 @@ var video1 = document.getElementById("myVideo1");
 var source1 = document.getElementById("videoSource1");
 
 // Define the new video source
-var newSource1 = "cave_-_45340 (Original).mp4";
+var newSource1 = "production_id_4787839 (1080p).mp4";
 
 // Update the source element's src attribute
 source1.src = newSource1;
@@ -87,3 +87,38 @@ var currentInvert = car.style.filter || "";
 // If the current invert is "invert(0)", set it to "invert(1)"; otherwise, set it to "invert(0)"
 car.style.filter = currentInvert === "invert(0)" ? "invert(1)" : "invert(1)";
 } 
+
+
+
+let currentPage = 1;
+
+function showPage(pageNumber) {
+  // Hide all pages
+  let pages = document.querySelectorAll('.page');
+  pages.forEach(page => {
+    page.style.display = 'none';
+  });
+
+  // Show the selected page
+  document.getElementById(`page${pageNumber}`).style.display = 'block';
+}
+
+function changePage(delta) {
+  currentPage += delta;
+
+  // Wrap around if going beyond the last page
+  if (currentPage > 4) {
+    currentPage = 1;
+  }
+
+  // Wrap around if going before the first page
+  if (currentPage < 1) {
+    currentPage = 4;
+  }
+
+  // Display the new page
+  showPage(currentPage);
+}
+
+// Initial display
+showPage(currentPage);
