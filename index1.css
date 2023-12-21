@@ -76,9 +76,15 @@
     cursor: pointer;
     transition: 0.4s;
 }
+@media screen and (max-width: 300px){
+    .p1{font-size: 4rem;}.bism img{width: 15rem;}
+}
+@media screen and (min-width: 300px){
+    .p1{font-size: 5rem;}.bism img{width: 20rem;}
+}
 .p2{
     background-color: #11535359;
-    width: 30%;
+    width: max-content;
     max-width: 100%;
     text-decoration: none;
     text-shadow:0px 5px 10px #5a300094;
@@ -89,11 +95,12 @@
     position: absolute;
     top: 65%;
     color: white;
-    font-size: 40px;
+    font-size: 2rem;
     left: 50%;
     cursor: pointer;
     transition: 0.4s;
 }
+
 
 .container{
     margin-left: auto;
