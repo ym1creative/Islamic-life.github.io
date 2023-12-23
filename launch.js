@@ -66,7 +66,7 @@ var video1 = document.getElementById("myVideo1");
 var source1 = document.getElementById("videoSource1");
 
 // Define the new video source
-var newSource1 = "production_id_4787839 (1080p).mp4";
+var newSource1 = "pexels-sosa-films-6773297 (1080p).mp4";
 
 // Update the source element's src attribute
 source1.src = newSource1;
