@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index1.css">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     
@@ -21,6 +23,28 @@
         <div class="bute" onclick="changeVideo1();toggleInvertFilter()">Dark Mode</div>
         <li><a href="index.html">Home</a></li>
     </ul></div>
+
+  
+        
+        <div class="main_div" id="main">
+    
+            <div class="current_song" id="current_voice"></div>
+                <img src="" id="cover_photo"/>
+                <h1 id="title"></h1>
+                <p id="singer"></p>
+                <div class="bb"><button id="prev"><i class="fas fa-backward fa-3x prev"></i></button>
+                  <button id="play"><i class="fas fa-play fa-3x prev"></i></button>
+                  <button id="next"><i class="fas fa-forward fa-3x prev"></i></button></div>
+            </div>
+            
+            <div class="songs">
+    
+            </div>
+        
+    
+        
+      
+
     <div class="parent1"><div class="container"><p class="p1">QURAN</p><a href="#parent2" class="p2">Surah Al Kahf</a></div></div>
     <div class="parent2" id="parent2">
 
@@ -34,7 +58,7 @@
                <div class="page1">
                 <p>Surah Al Kahf</p>
                 <div class="pga">
-                <a>Listen to Surah</a>
+                <div id="ListenT" onclick="toggleMainDiv()"><p>Listen to Surah</p></div>
                 <a href="#bism">read</a>
                 <a>tafseer</a>
                 <a href="#vi">Videos</a>
