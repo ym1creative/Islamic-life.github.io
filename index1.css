@@ -394,7 +394,7 @@ iframe {
     width: 100%;
     left: 50%;
     transform: translateX(-50%);
-    display: flex;
+    display: none;
     position: fixed;
     flex-direction: column;
     align-items: center;
@@ -403,5 +403,8 @@ iframe {
     border: none;
     color: white;
     background-color: transparent;
+}
+#ListenT{
+    cursor: pointer;
 }
   
