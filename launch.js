@@ -148,27 +148,23 @@ console.log(song_play)
 let songs_list = [
     {
         name : 'سوره الكهف',
-        Image : '',
         Song : 'videoplayback.m4a',
         Singer : 'المنشاوي'
     },
     {
-        name : 'Love Story',
-        Image : 'images/taylor_swift_love_story.jpg',
-        Song : 'music/Taylor-Swift-Love-Story.mp3',
-        Singer : 'Taylor Swift'
+        name : 'سوره الكهف',
+        Song : 'videoplayback (1).m4a',
+        Singer : 'القطامي'
     },
     {
-        name : 'Red',
-        Image : 'images/Taylor_Swift_Red.png',
-        Song : 'music/Taylor-Swift-Red.mp3',
-        Singer : 'Taylor Swift'
+        name : 'سوره الكهف',
+        Song : 'videoplayback (2).m4a',
+        Singer : 'محمدايوب'
     },
     {
-        name : 'Wildest Dreams',
-        Image : 'images/wildest_dreams_taylor.jfif',
-        Song : 'music/Taylor-Swift-Wildest-Dreams.mp3',
-        Singer : 'Taylor Swift'
+        name : 'سوره الكهف',
+        Song : 'videoplayback (4).m4a',
+        Singer : 'ياسر الدوسري'
     }
 ]
  
@@ -179,21 +175,30 @@ let flag=false;
  
 //showing song name and image on screen
 var audio = new Audio(songs_list[i].Song);
-song_image.src = songs_list[i].Image
+
 song_title.innerHTML = songs_list[i].name
 song_singer.innerHTML = songs_list[i].Singer
  
 //function to play/pause song
 song_play.addEventListener("click", function(){
- 
+    var button = document.getElementById('play');
     if(flag ===false){
         audio.play()
         flag=true;
+       
+        button.classList.add('clicked');
+        button.classList.remove('unclicked')
+        // You can change the color to any desired value
+        button.style.color = '#ffbf6c'; 
         console.log(flag)
     }
     else{
         audio.pause()
         flag=false;
+        button.classList.add('unclicked');
+        button.classList.remove('clicked')
+        // You can change the color to any desired value
+        button.style.color = 'white'; 
         console.log(flag)
     }
 })
@@ -209,7 +214,7 @@ song_next.addEventListener("click", function(){
         i=0;
     }
     console.log(i)
-    song_image.src = songs_list[i].Image
+    
     song_singer.innerHTML = songs_list[i].Singer
     song_title.innerHTML = songs_list[i].name
     audio = new Audio(songs_list[i].Song)
@@ -231,7 +236,7 @@ song_prev.addEventListener("click", function(){
         i=songs_list.length-1;
         console.log(i)
     }
-    song_image.src = songs_list[i].Image
+    
     song_singer.innerHTML = songs_list[i].Singer
     song_title.innerHTML = songs_list[i].name
     audio = new Audio(songs_list[i].Song)
@@ -243,3 +248,6 @@ song_prev.addEventListener("click", function(){
    
    
 })
+function changeColor() {
+   
+}

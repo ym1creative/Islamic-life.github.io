@@ -385,48 +385,54 @@ iframe {
     color: white;
     background-color: #2f2f2f;
 }
-
 .main_div{
-    z-index: 1;
-     font-size: 1.2rem;
-     color: white;
-     background: cadetblue;
-     bottom: 0%;
-     width: 100%;
-     left: 50%;
-     transform: translateX(-50%);
-     display: none;
-     position: fixed;
-     flex-direction: column;
-     align-items: center;
- }
- #next,#prev,#play{
-     text-shadow: 0px 5px 0px burlywood;
-     border: none;
-     color: white;
-     background-color: transparent;
- }
- .bb{
-     padding: 20px 0px 20px 0px;
-     width: 100%;
-     display: flex;
-     justify-content: space-evenly;
- }
- #title{
-     text-shadow: 0px 2px 2px #9f835f;
-     background: burlywood;
-     text-align: center;
-     width: 100%;
- }
- #singer{
-     text-shadow: 0px 2px 2px #9f835f;
-     padding-inline: 10px;
-     border-radius: 0px 0px 20px 20px;
-     font-weight: bold;
-     background: burlywood;
-     font-size: 1.5rem;
- }
+   z-index: 1;
+    font-size: 1.2rem;
+    color: white;
+    background: cadetblue;
+    bottom: 0%;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+}
+#next,#prev,#play{
+    text-shadow: 0px 5px 0px burlywood;
+    border: none;
+    color: white;
+    background-color: transparent;
+}
+
+.bb{
+    padding: 20px 0px 20px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+#title{
+    text-shadow: 0px 2px 2px #9f835f;
+    background: burlywood;
+    text-align: center;
+    width: 100%;
+}
+#singer{
+    text-shadow: 0px 2px 2px #9f835f;
+    padding-inline: 10px;
+    border-radius: 0px 0px 20px 20px;
+    font-weight: bold;
+    background: burlywood;
+    font-size: 1.5rem;
+}
 #Listent{
     cursor: pointer;
   } 
-  
+  #play.clicked {
+    text-shadow: 0px 5px 0px #416b6d;
+
+}
+#play.unclicked{
+    text-shadow: 0px 5px 0px burlywood;
+}
