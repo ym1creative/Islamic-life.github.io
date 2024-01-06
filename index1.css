@@ -5,24 +5,25 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     font-family: "Cairo";
+    
 }
 @font-face{
     font-family: quran;
     src: url("UthmanicHafs_V22.ttf");
 }
 .page1{
-   
-        background-color: #1212124d;
-        width: 100%;
-        transform: translate(-50%, -50%);
-        left: 50%;
-        position: absolute;
-        top: 50%;
-        color: white;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
+    direction: rtl;
+    font-size: 50px;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     
 }
 
@@ -34,21 +35,47 @@
         text-shadow: 1px 2px 2px #b5b5b5;
     
 }
+#ListenT p{
+    cursor: pointer;
+    text-shadow: none;
+    font-weight: normal;
+    font-size: 1.6rem;
+    margin: 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
+    transition: 0.3s ease-out;
+    width: 100%;
+}
+#ListenT p:hover{
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+.page p{
+    color: black;
+    line-height: 8vh;
+    padding: 5vh;
+    font-size: 2rem;
+    font-family: "quran";
+    text-shadow: 0px 1.2px 0px #939393;
+}
 
 .bism{
     
 }
 
 .nav{
+    gap: 2rem;
     position: relative;
-    border-radius: 20px 20px 0px 0px ;
     font-weight: bold;
-    font-size: 25px;
-    background-color:#4d748b5e;
+    background-color: #4d748b;
     display: flex;
-    justify-content:center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    align-items: center;
 }
 .nav ul{
+    gap: 3rem;
     max-width: 100%;
     margin-right: 0vh;
     display: flex;
@@ -57,7 +84,7 @@
     list-style-type: none;
 }
 .nav li{
-    margin-right: 10vh;
+    list-style: none;
 }
 .nav li a{
    text-decoration: none;
@@ -81,10 +108,10 @@
     transition: 0.4s;
 }
 @media screen and (max-width: 300px){
-    .p1{font-size: 4rem;}.bism img{width: 15rem;}.page1 p{font-size: 2.2rem;}
+    .p1{font-size: 4rem;}.bism img{width: 15rem;}.page1 p{font-size: 2.2rem;}.nav{font-size: 1rem;}
 }
 @media screen and (min-width: 300px){
-    .p1{font-size: 5rem;}.bism img{width: 20rem;}.page1 p{font-size: 3rem;}
+    .p1{font-size: 5rem;}.bism img{width: 20rem;}.page1 p{font-size: 3rem;}.nav{font-size: 1.4rem;}
 }
 .p2{
     background-color: #11535359;
@@ -235,7 +262,9 @@ body video{
     }
 
     .pga{
-
+        background-color: #00000045;
+        padding: 20px;
+        border-radius: 2rem;
         display: flex;
         flex-direction: column;
     }
@@ -246,10 +275,15 @@ body video{
             margin: 20px;
             color: white;
             text-decoration: none;
-            text-shadow: 0px 2px 5px #ffffff80;
-            box-shadow: 0px 5px 2px 0px #00000026;
             border-radius: 20px;
-       
+            border-bottom: 2px solid rgba(255, 255, 255, 0);
+            transition: 0.3s ease-out;
+    }
+    
+    .pga a:hover{
+        
+        border-bottom: 2px solid white;
+
     }
 
     .sfha{
@@ -334,6 +368,7 @@ iframe {
     text-decoration: none;
 }
 
+
 #myButton1{
     cursor: pointer;
     bottom: 2%;
@@ -366,6 +401,7 @@ iframe {
     justify-content: space-evenly;
   }
   .buu{
+    margin: 20px;
     cursor: pointer;
     font-weight: bold;
     color: white;
@@ -374,14 +410,7 @@ iframe {
     border: none;
     background:#000000d6;
 }
-  .page p{
-    color: black;
-    line-height: 8vh;
-    padding: 5vh;
-    font-size: 2rem;
-    font-family: "quran";
-    text-shadow: 0px 1.2px 0px #939393;
-  }
+  
   .bism img{
     
   }
