@@ -4,60 +4,31 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: "Cairo";
-    
-}
-@font-face{
-    font-family: quran;
-    src: url("UthmanicHafs_V22.ttf");
+    font-family: "Nunito";
 }
 .page1{
-    direction: rtl;
-    font-size: 50px;
-    width: 100%;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+   
+        background-color: #1212124d;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
     
 }
 
 .page1 p{
-        font-weight: bold;
+   
         display: flex;
         align-content: center;
         flex-wrap: wrap;
         text-shadow: 1px 2px 2px #b5b5b5;
     
-}
-#ListenT p{
-    cursor: pointer;
-    text-shadow: none;
-    font-weight: normal;
-    font-size: 1.6rem;
-    margin: 20px;
-    color: white;
-    text-decoration: none;
-    border-radius: 20px;
-    border-bottom: 2px solid rgba(255, 255, 255, 0);
-    transition: 0.3s ease-out;
-    width: 100%;
-}
-#ListenT p:hover{
-    border-bottom: 2px solid rgb(255, 255, 255);
-}
-.page p{
-    color: black;
-    line-height: 8vh;
-    padding: 5vh;
-    font-size: 2rem;
-    font-family: "quran";
-    text-shadow: 0px 1.2px 0px #939393;
 }
 
 .bism{
@@ -65,26 +36,16 @@
 }
 
 .nav{
-    gap: 2rem;
     position: relative;
+    border-radius: 20px 20px 0px 0px ;
     font-weight: bold;
-    background-color: #4d748b;
+    font-size: 25px;
+    background-color:#4d748b5e;
     display: flex;
-    justify-content: center;
-    flex-direction: row-reverse;
-    align-items: center;
+    justify-content:flex-start;
 }
 .nav ul{
-    gap: 3rem;
-    max-width: 100%;
-    margin-right: 0vh;
-    display: flex;
     list-style-type: none;
-    flex-direction: row-reverse;
-    list-style-type: none;
-}
-.nav li{
-    list-style: none;
 }
 .nav li a{
    text-decoration: none;
@@ -107,15 +68,9 @@
     cursor: pointer;
     transition: 0.4s;
 }
-@media screen and (max-width: 300px){
-    .p1{font-size: 4rem;}.bism img{width: 15rem;}.page1 p{font-size: 2.2rem;}.nav{font-size: 1rem;}
-}
-@media screen and (min-width: 300px){
-    .p1{font-size: 5rem;}.bism img{width: 20rem;}.page1 p{font-size: 3rem;}.nav{font-size: 1.4rem;}
-}
 .p2{
     background-color: #11535359;
-    width: max-content;
+    width: 30%;
     max-width: 100%;
     text-decoration: none;
     text-shadow:0px 5px 10px #5a300094;
@@ -126,12 +81,11 @@
     position: absolute;
     top: 65%;
     color: white;
-    font-size: 2rem;
+    font-size: 40px;
     left: 50%;
     cursor: pointer;
     transition: 0.4s;
 }
-
 
 .container{
     margin-left: auto;
@@ -139,15 +93,9 @@
     padding-right: 15px;
     padding-left: 15px;
     margin: auto;
-    
+    width: 600px;
 }
-.bx{
-cursor: pointer;
-margin: 10px;
-}
-.bx:hover{
-    color: white;
-}
+
 .parent2{
     background-image: url(daniel-lincoln-wF9PZkQLpZs-unsplash.jpg);
     max-width: 100%; 
@@ -185,7 +133,6 @@ body video{
 }
 
 .parent{
-    filter: invert(0);
     background: url(grunge-wall-texture.jpg)  ;
     -webkit-background-size: contain;
     -moz-background-size: contain;
@@ -194,7 +141,7 @@ body video{
     max-width: 100%; 
     position: relative;
     width: 100%;
-    
+    height: 1500vh;
     background-position: center;
     background-repeat: repeat;
 }
@@ -205,7 +152,7 @@ body video{
     right: 0%;
     top: 32vh;
     position: absolute;
-    font-size: 40px ;
+    font-size: 40px !important;
     color: rgb(0, 0, 0);
     display: flex;
     width: 100%;
@@ -262,9 +209,7 @@ body video{
     }
 
     .pga{
-        background-color: #00000045;
-        padding: 20px;
-        border-radius: 2rem;
+
         display: flex;
         flex-direction: column;
     }
@@ -275,15 +220,10 @@ body video{
             margin: 20px;
             color: white;
             text-decoration: none;
+            text-shadow: 0px 2px 5px #ffffff80;
+            box-shadow: 0px 5px 2px 0px #00000026;
             border-radius: 20px;
-            border-bottom: 2px solid rgba(255, 255, 255, 0);
-            transition: 0.3s ease-out;
-    }
-    
-    .pga a:hover{
-        
-        border-bottom: 2px solid white;
-
+       
     }
 
     .sfha{
@@ -291,7 +231,7 @@ body video{
     max-width: 100%; 
     position: relative;
     width: 100%;
-    
+    height: 100vh;
     background-size: cover;
     background-position: center;
 }
@@ -303,64 +243,20 @@ body video{
         justify-content: center;
     }
 .container{
+    
     height: 100%;
 }
-   .video1{
-    
-   }
-.playlist-container {
-    
-    font-size: 20px;
-    color: white;
-    background-color: #003d3d;
-    max-width: 100%;
-    margin: 20px auto;
-}
-
-.video-item {
-    direction: rtl;
-    margin-bottom: 10px;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.video-item:hover {
-    background-color: #008b8b;
-}
-
-iframe {
-    width: 100%;
-    height: 400px;
-}
+   
 
 
-.sharawi{
-    
-   transition: display 0.4s;
-}
-.sheikh_sharawi{
-    
-    transition: display 0.4s;
-    background-color: #002e2e;
-    font-size: 30px;
-    font-weight: bold;
-    direction: rtl;
-    cursor: pointer;
-}
 
-.buttt{
-    
+
+
+
+
+
+.sfha a{
     position: absolute;
-    bottom: 1%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-}
-
-#myButton{
-    cursor: pointer;
-    bottom: 1%;
-    position: relative;
     border-radius: 20px;
     padding: 5px;
     background: black;
@@ -368,106 +264,21 @@ iframe {
     text-decoration: none;
 }
 
-
-#myButton1{
-    cursor: pointer;
-    bottom: 2%;
-    position: relative;
-    border-radius: 20px;
-    padding: 5px;
-    background: black;
-    color: white;
-    text-decoration: none;
-}
-
-.playlsit{
+@media(min-width:240px){
+    .container{width: 300px;}.bism img{width: 55vh;}.span1{top: 15vh; font-size: 25px !important;}.p2{width: 80%;}
+    .parent{height: 1490vh;}.sfha a{top: 1500vh;}
     
-    backdrop-filter: blur(20px);
-    width: 30vh;
-    z-index: 2;
-    position: absolute;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50VH;
-    flex-direction: column;
-    justify-content: space-around;
 }
-  .buttons{
-    display: flex;
-    justify-content: space-evenly;
-  }
-  .buu{
-    margin: 20px;
-    cursor: pointer;
-    font-weight: bold;
-    color: white;
-    border-radius: 5px;
-    font-size: 1rem;
-    border: none;
-    background:#000000d6;
+@media(min-width:375px){
+    .container{width: 357px;}
 }
-  
-  .bism img{
-    
-  }
-  .bute{
-    cursor: pointer;
-    border-radius: 20px;
-    color: white;
-    background-color: #2f2f2f;
+@media(min-width:768px){
+    .container{width: 750px;}.span1{font-size: 40px !important;padding-top: 30px;}.bism img{width: 100vh;}.p2{width: 30%;}
+    .parent{height: 900vh;}.sfha a{top: 890vh;}
 }
-.main_div{
-   z-index: 1;
-    font-size: 1.2rem;
-    color: white;
-    background: cadetblue;
-    bottom: 0%;
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    display: none;
-    position: fixed;
-    flex-direction: column;
-    align-items: center;
+@media(min-width:992px){
+    .container{width: 970px;}
 }
-#next,#prev,#play{
-    text-shadow: 0px 5px 0px burlywood;
-    border: none;
-    color: white;
-    background-color: transparent;
-}
-
-.bb{
-    padding: 20px 0px 20px 0px;
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-}
-#title{
-    text-shadow: 0px 2px 2px #9f835f;
-    background: burlywood;
-    text-align: center;
-    width: 100%;
-}
-#singer{
-    text-shadow: 0px 2px 2px #9f835f;
-    padding-inline: 10px;
-    border-radius: 0px 0px 20px 20px;
-    font-weight: bold;
-    background: burlywood;
-    font-size: 1.5rem;
-}
-#Listent{
-    cursor: pointer;
-  } 
-  #play.clicked {
-    text-shadow: 0px 5px 0px #416b6d;
-
-}
-#play.unclicked{
-    text-shadow: 0px 5px 0px burlywood;
+@media(min-width:1200px){
+    .container{width: 1170px;}
 }

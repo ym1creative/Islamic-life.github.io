@@ -60,7 +60,7 @@ var video = document.getElementById("myVideo");
 var source = document.getElementById("videoSource");
 
 // Define the new video source
-var newSource = "pexels-sosa-films-6773297 (1080p).mp4m";
+var newSource = "pexels-sosa-films-6773297 (1080p).mp4";
 
 // Update the source element's src attribute
 source.src = newSource;
@@ -114,7 +114,7 @@ function showPage(pageNumber) {
 
 function changePage(delta) {
   currentPage += delta;
-
+    
   // Wrap around if going beyond the last page
   if (currentPage > 4) {
     currentPage = 1;
@@ -190,7 +190,7 @@ song_play.addEventListener("click", function(){
         button.classList.remove('unclicked')
         // You can change the color to any desired value
         button.style.color = '#ffbf6c'; 
-        console.log(flag)
+      
     }
     else{
         audio.pause()
@@ -199,7 +199,7 @@ song_play.addEventListener("click", function(){
         button.classList.remove('clicked')
         // You can change the color to any desired value
         button.style.color = 'white'; 
-        console.log(flag)
+        
     }
 })
  
@@ -213,7 +213,7 @@ song_next.addEventListener("click", function(){
        
         i=0;
     }
-    console.log(i)
+   
     
     song_singer.innerHTML = songs_list[i].Singer
     song_title.innerHTML = songs_list[i].name
@@ -221,7 +221,7 @@ song_next.addEventListener("click", function(){
     if(flag ===false){
         audio.play()
         flag=true;
-        console.log(flag)
+       
     }
    
 })
@@ -234,16 +234,15 @@ song_prev.addEventListener("click", function(){
     i = i-1;
     if(i<=0){
         i=songs_list.length-1;
-        console.log(i)
+        
     }
-    
     song_singer.innerHTML = songs_list[i].Singer
     song_title.innerHTML = songs_list[i].name
     audio = new Audio(songs_list[i].Song)
     if(flag ===false){
         audio.play()
         flag=true;
-        console.log(flag)
+        
     }
    
    
