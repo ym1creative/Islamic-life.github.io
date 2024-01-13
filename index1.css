@@ -1,135 +1,480 @@
 *{
+    margin: 0%;
+    scroll-behavior: smooth;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     font-family: "Cairo";
-    padding:0;
-    margin: 0;
-}
-body{
-    background-color: #609966;
     
 }
-.nav{
-    padding-block: 10px;
-    background: #9DC08B;
-    display: flex;
-    justify-content: center;
+@font-face{
+    font-family: quran;
+    src: url("UthmanicHafs_V22.ttf");
 }
-.nav a{
-    text-align: center;
-    font-weight: bold;
+:root{
+    
+}
+.page1{
+    direction: rtl;
+    font-size: 50px;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.page1 p{
+        font-weight: bold;
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+        text-shadow: 1px 2px 2px #b5b5b5;
+    
+}
+#ListenT p{
+    cursor: pointer;
+    text-shadow: none;
+    font-weight: normal;
     font-size: 1.6rem;
-    margin-inline: 1rem;
+    margin: 20px;
+    color: white;
     text-decoration: none;
-    color: white;
-    position: relative;
-}
-.nav img{
-    display: none;
-    position: absolute;
-    width: 50rem;
-
-}
-.sira img{
-    left: 0;
-    position: absolute;
-    width: 100%;
-}
-.sira p{
-    margin-top: 0;
-    display: flex;
-    position: absolute;
-    align-items: center;
-    align-content: center;
-    z-index: 1;
-    color: white;
-    font-size: 3rem;
-    width: 100%;
-    justify-content: center;
-}
-.nav a::after{
-    right: 0;
-    content: "";
-    position: absolute;
-    bottom: 0;
-    height: 3px;
-    left: 0;
-    background: #b1a89c00;
-    transition: 0.3s ease;
-}
-
-.nav a:hover:after{ 
-    background: #EDF1D6;
-}
-
-.nav li{
-    display: flex;
-    flex-wrap: nowrap;
     border-radius: 20px;
-    background: #609966;
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
+    transition: 0.3s ease-out;
+    width: 100%;
+}
+#ListenT p:hover{
+    background: #f8f8ff;
+    color: black;
+}
+
+.page p{
+    color: black;
+    line-height: 8vh;
+    padding: 5vh;
+    font-size: 2rem;
+    font-family: "quran";
+    text-shadow: 0px 1.2px 0px #939393;
+}
+
+.bism{
+    
+}
+
+.nav{
+    gap: 2rem;
+    position: relative;
+    font-weight: bold;
+    background-color: #4d748b;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.nav ul{
+    gap: 3rem;
+    max-width: 100%;
+    margin-right: 0vh;
+    display: flex;
+    list-style-type: none;
+    flex-direction: row-reverse;
+    list-style-type: none;
+}
+.nav li{
     list-style: none;
 }
-.mid{
-    padding-inline: 10px;
-    border-inline: 2px solid #EDF1D6;
-}
-@media screen and (max-width: 433px){
-    .nav li {
-        overflow: hidden;
-        gap: 3rem;
-        flex-direction: column;
-        position: fixed;
-        inset: 0 0 0 40%;
-        background-color: #609966;
-        justify-content: center;
-        align-items: center;
-    }
-    .nav a{
-        background-image: image("—Pngtree—luxury mandala golden transparent background_5996759.png");
-        border: none;
-    }
-    .nav img{
-        display: block;
-        position: absolute;
-        width: 50rem;
-    
-    }
-}
-
-
-#countr{
-    text-shadow: 0px 3px 3px #060606;
-    border: 5px solid #FAE7C9;
-    text-align: center;
-    font-weight: bold;
-    border-radius: 10rem;
-    padding: 1rem;
-    background:#B0926A;
+.nav li a{
+   text-decoration: none;
     color: white;
-    font-size: 6rem;
-    font-family: auto;
-    transition: 0.1s;
 }
-
-#plus{
-    box-shadow: inset 0px 0px 10px #fae7c900;
-    cursor: pointer;
-    color: white;
-    border: none;
-    background: #706233;
-    padding: 20px;
-    border-radius: 20px;
-    font-size: 2rem;
-    font-weight: 900;
-    transition: 0.3s ease-out;
-}
-
-.c{
-    gap: 1rem;
+.p1{
+    width: 100%;
     max-width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: center;
+    text-decoration: none;
+    text-shadow:0px 2px 4px #ffffff;
+    font-weight: bold;
+    border-radius: 20px;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 50%;
+    color: white;
+    font-size: 80px;
+    left: 50%;
+    cursor: pointer;
+    transition: 0.4s;
 }
-#plus.clicked{
-    box-shadow: inset 0px 0px 10px #fffbf6;
+@media screen and (max-width: 300px){
+    .p1{font-size: 4rem;}.bism img{width: 15rem;}.page1 p{font-size: 2.2rem;}.nav{font-size: 1rem;}
+}
+@media screen and (min-width: 300px){
+    .p1{font-size: 5rem;}.bism img{width: 20rem;}.page1 p{font-size: 3rem;}.nav{font-size: 1.4rem;}
+}
+.p2{
+    background-color: #11535359;
+    width: max-content;
+    max-width: 100%;
+    text-decoration: none;
+    text-shadow:0px 5px 10px #5a300094;
+    font-weight: bold;
+    border-radius: 20px;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 65%;
+    color: white;
+    font-size: 2rem;
+    left: 50%;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: auto;
+    
+}
+.bx{
+cursor: pointer;
+margin: 10px;
+}
+.bx:hover{
+    color: white;
+}
+.parent2{
+    background-image: url(daniel-lincoln-wF9PZkQLpZs-unsplash.jpg);
+    max-width: 100%; 
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+body video{
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+}
+.parent1 video{
+  
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+
+}
+.parent1{
+   
+    max-width: 100%; 
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.parent{
+    filter: invert(0);
+    background: url(grunge-wall-texture.jpg)  ;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    max-width: 100%; 
+    position: relative;
+    width: 100%;
+    
+    background-position: center;
+    background-repeat: repeat;
+}
+
+    .span1{
+        cursor: pointer;
+        font-weight: bold;
+    right: 0%;
+    top: 32vh;
+    position: absolute;
+    font-size: 40px ;
+    color: rgb(0, 0, 0);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    }
+    .span2{
+        cursor: pointer;
+        font-weight: bold;
+    right: 0%;
+    top: 32vh;
+    position: absolute;
+    font-size: 40px;
+    color: white;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    }
+    .span2:hover{
+        color: #cefdff;
+    }
+    span{
+        display: flex;
+    }
+    .cave{
+        height: 100vh;
+        background-color: #00819d8c;
+    }
+    .span1:hover{
+        
+    }
+    .page{
+        direction: rtl;
+    }
+    body{
+        background-color: #8fa1b5;
+    }
+    .page1{
+        font-size: 50px;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .cave {
+        height: 100vh;
+        background-color: #0087a552;
+    }
+
+    .pga{
+        background-color: #00000045;
+        padding: 20px;
+        border-radius: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pga a{
+        
+            font-size: 40px;
+            margin: 20px;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0);
+            transition: 0.3s ease-out;
+    }
+    
+    .pga a:hover{
+        
+        background: #f8f8ff;
+        color: black;
+    }
+
+    
+
+    .sfha{
+        
+    max-width: 100%; 
+    position: relative;
+    width: 100%;
+    
+    background-size: cover;
+    background-position: center;
+}
+
+    .bism{
+
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+.container{
+    height: 100%;
+}
+   .video1{
+    
+   }
+.playlist-container {
+    
+    font-size: 20px;
+    color: white;
+    background-color: #003d3d;
+    max-width: 100%;
+    margin: 20px auto;
+}
+
+.video-item {
+    direction: rtl;
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.video-item:hover {
+    background-color: #008b8b;
+}
+
+iframe {
+    width: 100%;
+    height: 400px;
+}
+
+
+.sharawi{
+    
+   transition: display 0.4s;
+}
+.sheikh_sharawi{
+    
+    transition: display 0.4s;
+    background-color: #002e2e;
+    font-size: 30px;
+    font-weight: bold;
+    direction: rtl;
+    cursor: pointer;
+}
+
+.buttt{
+    
+    position: absolute;
+    bottom: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#myButton{
+    cursor: pointer;
+    bottom: 1%;
+    position: relative;
+    border-radius: 20px;
+    padding: 5px;
+    background: black;
+    color: white;
+    text-decoration: none;
+}
+
+
+#myButton1{
+    cursor: pointer;
+    bottom: 2%;
+    position: relative;
+    border-radius: 20px;
+    padding: 5px;
+    background: black;
+    color: white;
+    text-decoration: none;
+}
+
+.playlsit{
+    
+    backdrop-filter: blur(20px);
+    width: 30vh;
+    z-index: 2;
+    position: absolute;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50VH;
+    flex-direction: column;
+    justify-content: space-around;
+}
+  .buttons{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .buu{
+    margin: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: none;
+    background:#000000d6;
+}
+  
+  .bism img{
+    
+  }
+  .bute{
+    cursor: pointer;
+    border-radius: 20px;
+    color: white;
+    background-color: #2f2f2f;
+}
+.main_div{
+   z-index: 1;
+    font-size: 1.2rem;
+    color: white;
+    background: cadetblue;
+    bottom: 0%;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+}
+#next,#prev,#play{
+    text-shadow: 0px 5px 0px burlywood;
+    border: none;
+    color: white;
+    background-color: transparent;
+}
+
+.bb{
+    padding: 20px 0px 20px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+#title{
+    text-shadow: 0px 2px 2px #9f835f;
+    background: burlywood;
+    text-align: center;
+    width: 100%;
+}
+#singer{
+    text-shadow: 0px 2px 2px #9f835f;
+    padding-inline: 10px;
+    border-radius: 0px 0px 20px 20px;
+    font-weight: bold;
+    background: burlywood;
+    font-size: 1.5rem;
+}
+#Listent{
+    cursor: pointer;
+  } 
+  #play.clicked {
+    text-shadow: 0px 5px 0px #416b6d;
+
+}
+#play.unclicked{
+    text-shadow: 0px 5px 0px burlywood;
 }
