@@ -86,16 +86,7 @@ video1.load();
 // Play the video
 video1.play();
 } 
-function toggleInvertFilter() {
-// Get the video element
-var car = document.getElementById("parent");
 
-// Get the current invert value (if any)
-var currentInvert = car.style.filter || "";
-
-// If the current invert is "invert(0)", set it to "invert(1)"; otherwise, set it to "invert(0)"
-car.style.filter = currentInvert === "invert(0)" ? "invert(1)" : "invert(1)";
-} 
 
 
 
@@ -250,4 +241,125 @@ song_prev.addEventListener("click", function(){
 function scrollToSection(sectionId) {
     var section = document.getElementById(sectionId);
     section.scrollIntoView({ behavior: 'smooth' });
+}
+let wholeText = "1 - الثناء بصفات الكمال والجلال، وبالنعم الظاهرة والباطنة لله وحده الذي أنزل على عبده ورسوله محمَّد - صلى الله عليه وسلم - القرآن، ولم يجعل لهذا القرآن اعوجاجًا وميلًا عن الحق.2 - بل جعله مستقيمًا لا تناقض فيه ولا اختلاف؛ ليخوّف الكافرين من عذاب قوي من عند الله ينتظرهم، ويخبر المؤمنين الذين يعملون الأعمال الصالحات بما يسرهم أن لهم ثوابًا حسنًا لا يدانيه ثواب.3 - خالدين في هذا الثواب أبدًا، فلا ينقطع عنهم.4 - ويخوف اليهود والنصارى وبعض المشركين الذين قالوا: اتخذ الله ولدًا.";
+
+// Split the text based on the numbers present in the string
+let splitArray = wholeText.split(/\d+\s*-\s*/);
+
+// Remove any empty strings from the array
+splitArray = splitArray.filter(item => item.trim() !== '');
+
+fetch("https://bot.altaqwaa.org/Quran.json")
+    .then(function (response) { return response.json(); })
+    .then(function (data) {
+   
+    // (alnas !== null) ? 
+    
+    // data[17].array.map(function(ayah,index) {
+    //     alnas.innerHTML+= `<span class="ayah${index}"> ${ayah.ar}(${index+1}) </span>`;
+    // }).join(``)
+    
+    
+    // : console.log("errors"); 
+    var kahf = document.getElementById("v2");
+    if(kahf!==null){
+        for(let i=0;i<30;i++){
+            kahf.innerHTML+= `<div class="nop"> <span class="ayah${i}" onclick="showtfsr(${i})"> ${data[17].array[i].ar}(${i+1})</span><button class="btnnn" id="btnn${i}" data-visible="false" onclick="disstfsr(${i})">غلق</button> <span data-visible="false" class="tfs" id="tfsr${i}" >${splitArray[i]}</span></div>`;
+        }
+    }
+    var kahf1 = document.getElementById("v3");
+    if(kahf1!==null){
+        for(let i=30;i<60;i++){
+            kahf1.innerHTML+= `<div class="nop"> <span class="ayah${i}" onclick="showtfsr(${i})"> ${data[17].array[i].ar}(${i+1})</span><button class="btnnn" id="btnn${i}" data-visible="false" onclick="disstfsr(${i})">غلق</button> <span data-visible="false" class="tfs" id="tfsr${i}" >${splitArray[i]}</span></div>`;
+        }
+    }
+    var kahf2 = document.getElementById("v4");
+    if(kahf2!==null){
+        for(let i=60;i<90;i++){
+            kahf2.innerHTML+= `<div class="nop"> <span class="ayah${i}" onclick="showtfsr(${i})"> ${data[17].array[i].ar}(${i+1})</span><button class="btnnn" id="btnn${i}" data-visible="false" onclick="disstfsr(${i})">غلق</button> <span data-visible="false" class="tfs" id="tfsr${i}" >${splitArray[i]}</span></div>`;
+         }
+    }
+    var kahf3 = document.getElementById("v5");
+    if(kahf3!==null){
+        for(let i=90;i<110;i++){
+            kahf3.innerHTML+= `<div class="nop"> <span class="ayah${i}" onclick="showtfsr(${i})"> ${data[17].array[i].ar}(${i+1})</span><button class="btnnn" id="btnn${i}" data-visible="false" onclick="disstfsr(${i})">غلق</button> <span data-visible="false" class="tfs" id="tfsr${i}" >${splitArray[i]}</span></div>`;
+         }
+    }
+    console.log(data[17].array[0].ar);
+
+    
+
+
+})
+    .catch(function (error) { return console.error(error); });
+
+  
+
+    fetch("http://api.quran-tafseer.com/tafseer/1/18/1/110")
+    .then(response => response.json())
+    .then(data => {
+        
+        data.sort((a, b) => a.ayah_number - b.ayah_number);
+
+        for(let i=0;i<110;i++){
+
+            let firstp=document.getElementById(`tfsr${i}`);
+            firstp.innerText=data[i].text;
+            
+        }
+      console.log(data);
+    })
+    .catch(error => {
+        console.error('Error fetching data:', error);
+    });
+
+
+  function showtfsr(i){
+    
+   // Assuming you have an element with the id "exampleElement"
+    let element = document.getElementById(`btnn${i}`);
+    let elementt = document.getElementById(`tfsr${i}`);
+
+// Set the data-visible attribute to "true"
+    element.setAttribute("data-visible", "true");
+    elementt.setAttribute("data-visible", "true");
+
+    
+  }
+  function disstfsr(i){
+    
+    let element = document.getElementById(`btnn${i}`);
+    let elementt = document.getElementById(`tfsr${i}`);
+
+// Set the data-visible attribute to "true"
+    element.setAttribute("data-visible", "false");
+    elementt.setAttribute("data-visible", "false");
+
+    
+  }
+    function changeRootColor() {
+        var car = document.getElementById("parent");
+        // Get the current invert value (if any)
+        var currentInvert = car.style.filter || "";
+        // If the current invert is "invert(0)", set it to "invert(1)"; otherwise, set it to "invert(0)"
+        car.style.filter = currentInvert === "invert(0)" ? "invert(1)" : "invert(1)";
+        document.documentElement.style.setProperty('--color', "#191919")
+        document.documentElement.style.setProperty('--secolor', "#4d748b00")
+        document.documentElement.style.setProperty('--btcolor', "#a96900")
+        document.documentElement.style.setProperty('--hcolor', "#ffe86a")
+        document.documentElement.style.setProperty('--spancolor', "#03008b")
+        item.style.backgroundColor ="#0e1c2100";
+      }
+      
+
+      
+// Output the resulting array
+
+for (let i = 0; i < 4; i++) {
+    let tf = document.getElementById(`tfsr${i}`);
+    if (tf!==null){
+   
+    tf.innerText = splitArray[i];
+    } // Assign value from splitArray to the text content of the element
 }
