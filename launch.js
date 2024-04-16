@@ -299,7 +299,7 @@ fetch("https://bot.altaqwaa.org/Quran.json")
     fetch("http://api.quran-tafseer.com/tafseer/1/18/1/110")
     .then(response => response.json())
     .then(data => {
-        
+        //c
         data.sort((a, b) => a.ayah_number - b.ayah_number);
 
         for(let i=0;i<110;i++){
