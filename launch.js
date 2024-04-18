@@ -265,7 +265,11 @@ fetch("https://bot.altaqwaa.org/Quran.json")
     var kahf = document.getElementById("v2");
     if(kahf!==null){
         for(let i=0;i<30;i++){
-            kahf.innerHTML+= `<div class="nop"> <span class="ayah${i}" onclick="showtfsr(${i})"> ${data[17].array[i].ar}(${i+1})</span><button class="btnnn" id="btnn${i}" data-visible="false" onclick="disstfsr(${i})">غلق</button> <span data-visible="false" class="tfs" id="tfsr${i}" >${splitArray[i]}</span></div>`;
+            kahf.innerHTML+= `<div class="nop">
+            <span class="ayah${i}" onclick="showtfsr(${i})"> ${data[17].array[i].ar}(${i+1})</span>
+            <button class="btnnn" id="btnn${i}" data-visible="false" onclick="disstfsr(${i})">غلق</button> 
+            <span data-visible="false" class="tfs" id="tfsr${i}" >${splitArray[i]}</span>
+            </div>`;
         }
     }
     var kahf1 = document.getElementById("v3");
@@ -294,48 +298,97 @@ fetch("https://bot.altaqwaa.org/Quran.json")
 })
     .catch(function (error) { return console.error(error); });
 
-  
 
-    fetch("https://quranenc.com/api/v1/translation/sura/arabic_moyassar/18")
-    .then(response => response.json())
-    .then(data => {
-    
-        
+//--------------------------------------------------------------------------------
 
-        for(let i=0;i<110;i++){
-
-            let firstp=document.getElementById(`tfsr${i}`);
-            firstp.innerText=data.result[i].translation;
-            
+    async function updateDivs(data) {
+        for (let i = 0; i < 110; i++) {
+            await new Promise((resolve) => {
+                setTimeout(() => {
+                    let firstp = document.getElementById(`tfsr${i}`);
+                    if (firstp) {
+                        firstp.innerText = data.ayahs[i].text;
+                    }
+                    resolve();
+                }, 0); // Using a timeout of 0 to allow the browser to render the elements
+            });
         }
-      console.log(data);
-    })
-    .catch(error => {
-        console.error('Error fetching data:', error);
-    });
-
-
+    }
+    
+    // Call the function to start updating the divs
+    
+    function fetchData(url) {
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                updateDivs(data);
+                console.log(data);
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+    }
+    
+    function tasfsir_pages() {
+        let el_tab=document.getElementById("tab1");
+        let el_muasser=document.getElementById("my1");
+        let el_qurt=document.getElementById("q1");
+        const qurtubi = "https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@main/tafsir/ar-tafseer-al-qurtubi/18.json";
+        const muyasser = "https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@main/tafsir/ar-tafsir-muyassar/18.json";
+        const tabari = "https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@main/tafsir/ar-tafsir-al-tabari/18.json";
+    
+        let qurtubi_book = document.getElementById("q1");
+        let tabari_book = document.getElementById("tab1");
+        let muyassar_book = document.getElementById("my1");
+    
+        qurtubi_book.addEventListener('click', function() {
+            fetchData(qurtubi);
+            console.log("wow");
+        });
+    
+        tabari_book.addEventListener('click', function() {
+            fetchData(tabari);
+            
+        });
+    
+        muyassar_book.addEventListener('click', function() {
+            fetchData(muyasser);
+        });
+    }
+    
+    tasfsir_pages()
   function showtfsr(i){
     
    // Assuming you have an element with the id "exampleElement"
     let element = document.getElementById(`btnn${i}`);
     let elementt = document.getElementById(`tfsr${i}`);
+    let el_tab=document.getElementById("tab1");
+    let el_muasser=document.getElementById("my1");
+    let el_qurt=document.getElementById("q1");
 
 // Set the data-visible attribute to "true"
     element.setAttribute("data-visible", "true");
     elementt.setAttribute("data-visible", "true");
-
-    
+    // el_tab.setAttribute("data-visible", "true");
+    // el_qurt.setAttribute("data-visible", "true");
+    // el_muasser.setAttribute("data-visible", "true");
   }
+  
   function disstfsr(i){
     
-    let element = document.getElementById(`btnn${i}`);
-    let elementt = document.getElementById(`tfsr${i}`);
+   // Assuming you have an element with the id "exampleElement"
+   let element = document.getElementById(`btnn${i}`);
+   let elementt = document.getElementById(`tfsr${i}`);
+   let el_tab=document.getElementById("tab1");
+   let el_muasser=document.getElementById("my1");
+   let el_qurt=document.getElementById("q1");
 
 // Set the data-visible attribute to "true"
-    element.setAttribute("data-visible", "false");
-    elementt.setAttribute("data-visible", "false");
-
+   element.setAttribute("data-visible", "false");
+   elementt.setAttribute("data-visible", "false");
+//    el_tab.setAttribute("data-visible", "false");
+//    el_qurt.setAttribute("data-visible", "false");
+//    el_muasser.setAttribute("data-visible", "false");
     
   }
     function changeRootColor() {

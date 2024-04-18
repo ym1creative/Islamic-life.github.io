@@ -12,6 +12,7 @@
   --btcolor: #077a59;
   --hcolor: #ffffff;
   --spancolor: #007956;
+  --shadow: #00593f;
 }
 /*Inside CSS file*/
 .hafssmart {
@@ -244,7 +245,7 @@
   text-align: center;
   transform: translate(-50%, -50%);
   position: absolute;
-  top: 65%;
+  top: 69%;
   color: white;
   font-size: 2rem;
   left: 50%;
@@ -271,7 +272,7 @@
   max-width: 100%;
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   background-size: cover;
   background-position: center;
 }
@@ -563,6 +564,30 @@ span:hover {
 }
 .btnnn {
   display: none;
+}
+.tafsir_pages {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#q1,
+#tab1,
+#my1 {
+  color: white;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 1.2rem;
+  background: var(--btcolor);
+  display: block;
+  border: none;
+  border-radius: 2rem;
+}
+#q1[data-visible="true"],
+#tab1[data-visible="true"],
+#my1[data-visible="true"] {
+  box-shadow: 2px 5px 0px var(--shadow);
 }
 .btnnn[data-visible="true"] {
   cursor: pointer;
