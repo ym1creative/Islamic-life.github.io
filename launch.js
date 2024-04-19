@@ -321,13 +321,19 @@ fetch("https://bot.altaqwaa.org/Quran.json")
         fetch(url)
             .then(response => response.json())
             .then(data => {
+                // Sort the ayahs array
+                data.ayahs.sort((a, b) => a.ayah - b.ayah); // Assuming `number` is the property to sort by
+    
+                // Update the divs with the sorted data
                 updateDivs(data);
+    
                 console.log(data);
             })
             .catch(error => {
                 console.error('Error fetching data:', error);
             });
     }
+    
     
     function tasfsir_pages() {
         let el_tab=document.getElementById("tab1");
